@@ -26,21 +26,21 @@ def predict_type():
         # Get the output from the classification model
         variety = model_new.predict(sepal_len, sepal_wid, petal_len, petal_wid)
         proba = model_new.predict_proba(sepal_len, sepal_wid, petal_len, petal_wid)
-        if variety == 'Setosa':
-            im = Image.open("img/setosa.jpg")
-            data = io.BytesIO()
-            im.save(data, "JPEG")
-            encoded_img_data = base64.b64encode(data.getvalue())
-        elif variety == 'Virginica':
-            im = Image.open("img/virginica.jpg")
-            data = io.BytesIO()
-            im.save(data, "JPEG")
-            encoded_img_data = base64.b64encode(data.getvalue())
-        else:
-            im = Image.open("img/versicolor.jpg")
-            data = io.BytesIO()
-            im.save(data, "JPEG")
-            encoded_img_data = base64.b64encode(data.getvalue())
+#         if variety == 'Setosa':
+#             im = Image.open("img/setosa.jpg")
+#             data = io.BytesIO()
+#             im.save(data, "JPEG")
+#             encoded_img_data = base64.b64encode(data.getvalue())
+#         elif variety == 'Virginica':
+#             im = Image.open("img/virginica.jpg")
+#             data = io.BytesIO()
+#             im.save(data, "JPEG")
+#             encoded_img_data = base64.b64encode(data.getvalue())
+#         else:
+#             im = Image.open("img/versicolor.jpg")
+#             data = io.BytesIO()
+#             im.save(data, "JPEG")
+#             encoded_img_data = base64.b64encode(data.getvalue())
         #Render the output in new HTML page
         return render_template('home.html', variety = variety, img_data = encoded_img_data.decode('utf-8'), proba = proba)
     except:
