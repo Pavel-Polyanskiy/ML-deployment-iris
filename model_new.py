@@ -71,8 +71,6 @@ def predict_proba(sep_len, sep_wid, pet_len, pet_wid):
     return prediction_proba
 
 
-# %%
-import pickle
-pickle.dump(lr, open('/Users/polyanaboss/Desktop/ML Deployment/first_deployment/logreg.pickle', 'wb'))
+
 
 
