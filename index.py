@@ -17,7 +17,7 @@ def home():
 
 
 @app.route('/predict',methods=['GET'])
-def predict_type():
+def predict():
     try:
         sepal_len = request.args.get('sep_len') # Get parameters for sepal length
         sepal_wid = request.args.get('sep_wid') # Get parameters for sepal width
