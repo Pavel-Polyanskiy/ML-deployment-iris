@@ -9,5 +9,5 @@ itsdangerous==1.1.0
 Werkzeug==1.0.1
 pillow==8.1.0
 pybase64==1.2.0
-io>=3.9
+io==3.9.7
 pillow==8.1.0
