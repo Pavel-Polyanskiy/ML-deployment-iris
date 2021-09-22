@@ -16,7 +16,7 @@ def home():
     return render_template('home.html')
 
 
-@app.route('/predict',methods=['GET'])
+@app.route('/predict',methods=['POST']) #was GET
 def predict():
     try:
         sepal_len = request.args.get('sep_len') # Get parameters for sepal length
