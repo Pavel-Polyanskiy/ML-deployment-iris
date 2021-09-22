@@ -42,7 +42,7 @@ def predict():
 #             im.save(data, "JPEG")
 #             encoded_img_data = base64.b64encode(data.getvalue())
         #Render the output in new HTML page
-        return render_template('home.html', variety = variety, img_data = encoded_img_data.decode('utf-8'), proba = proba)
+        return render_template('home.html', variety = variety, proba=proba)#img_data = encoded_img_data.decode('utf-8'), proba = proba)
     except:
         return 'Error'
 
